@@ -1,5 +1,6 @@
 <?php
 
+// You can Edit this Plugin\Fork it and you can set the Scoreboard to your Settings :l
 namespace Scoreboard;
 
 use pocketmine\plugin\PluginBase;
@@ -17,7 +18,7 @@ use pocketmine\scheduler\Task as PluginTask;
 class Main extends PluginBase implements Listener {
 	
 	public function onEnable() {
-		$this->getLogger()->alert("§aScoreboard Activ);
+		$this->getLogger()->alert("§aScoreboard Activ");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask($this), 20);
 	}
