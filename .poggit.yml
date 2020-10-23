@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/davidlouis101/scoreboard-test
+build-by-default: true
+branches:
+- main
+projects:
+  scoreboard-test:
+    path: ""
+...
