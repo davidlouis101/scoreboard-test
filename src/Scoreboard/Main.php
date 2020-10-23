@@ -17,7 +17,7 @@ use pocketmine\scheduler\Task as PluginTask;
 class Main extends PluginBase implements Listener {
 	
 	public function onEnable() {
-		$this->getLogger()->alert("§aScoreboard Aktiv");
+		$this->getLogger()->alert("§aScoreboard Activ);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask($this), 20);
 	}
@@ -34,13 +34,13 @@ class Main extends PluginBase implements Listener {
 			$online = count($players->getServer()->getOnlinePlayers());
 			//Create
 			Scoreboard::removeScoreboard($players, "yt");
-			Scoreboard::createScoreboard($players, "§l§7««§a§oFuture§fCraft§r§l§7»»", "yt");
+			Scoreboard::createScoreboard($players, "§l§7««§aTest§7»»", "yt");
 			//Set Entrys
 			Scoreboard::setScoreboardEntry($players, 1, "§k§a§lfff", "yt");
 			Scoreboard::setScoreboardEntry($players, 2, "§9Name", "yt");
 			Scoreboard::setScoreboardEntry($players, 3, "§7»§d$name", "yt");
 			Scoreboard::setScoreboardEntry($players, 4, "§k§a§lddd", "yt");
-			Scoreboard::setScoreboardEntry($players, 5, "§9Kontostand", "yt");
+			Scoreboard::setScoreboardEntry($players, 5, "§9Money", "yt");
 			Scoreboard::setScoreboardEntry($players, 6, "§7»§d$money", "yt");
 			Scoreboard::setScoreboardEntry($players, 7, "§k§a§lqqq", "yt");
 			Scoreboard::setScoreboardEntry($players, 8, "§9ItemID", "yt");
@@ -55,6 +55,6 @@ class Main extends PluginBase implements Listener {
 	}
 	
 	public function onDisable() {
-		$this->getLogger()->alert("§c§lScoreboard Plugin Deaktiviert");
+		$this->getLogger()->alert("§c§lScoreboard Plugin now Offline");
 	}
 }
